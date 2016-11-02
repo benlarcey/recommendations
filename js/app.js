@@ -77,8 +77,45 @@ $('#goBack').on('click', function() {
     return false;
     
 });
-
     
+    
+var Airtable = require('airtable');
+// Get a base ID for an instance of art gallery example
+var base = new Airtable({ apiKey: 'keyYyZzP8Btod4nXo' }).base('app7aizzZiAt0B0HI');
+
+
+var loadArtists = function() {
+    $('#resultsContainer').empty();
+
+    base('POS').select({
+        sort: [
+            {field: 'Name', direction: 'asc'}
+        ]
+    }).eachPage(function page(records, fetchNextPage) {
+        records.forEach(function(record) {
+            console.log('Retrieved ', record.get('Name'));
+
+            var $artistInfo = $('<div>');
+            $artistInfo.append($('<h3>').text(record.get('Name')));
+            $artistInfo.append($('<div>').text(record.get('min_price')));
+            $artistInfo.append($('<a>').text(record.get('Name')));
+            
+            
+      
+            $artistInfo.attr('data-record-id', record.getId());
+
+            $('#resultsContainer').append($artistInfo);
+        });
+
+        fetchNextPage();
+    }, function done(error) {
+        console.log(error);
+    });
+};
+
+
+loadArtists();
+
     
 });
 

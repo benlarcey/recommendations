@@ -51,22 +51,33 @@ function validateSelection() {
 var animating;    
     
 $('#softwareSubmit').on('click', function() {
-	if(animating) return false;
-	animating = true;
-    
+//	if(animating) return false;
+//	animating = true;
+//    
     
 	$('#softwareForm').fadeOut(100);
-    $('#spinner-box').delay(100).show().delay(2000).fadeOut(400, function() {
+    $('#spinner-box').delay(100).show().delay(2).fadeOut(400, function() {
 
     $('#softwareResults').fadeIn();
 
     });
     
-    
-    
     return false;
+    
+    
+    
                         
 });
+    
+ 
+$('#goBack').on('click', function() {
+    $('#softwareResults').fadeOut(),
+    $('#softwareForm').delay(400).fadeIn()
+    
+    return false;
+    
+});
+
     
     
 });

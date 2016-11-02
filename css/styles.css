@@ -2,6 +2,10 @@
     
 }
 
+a {
+    text-decoration: none;
+}
+
 /*Hide Results */
 
 #softwareResults {
@@ -84,3 +88,106 @@
   border: none;
   width: 32px;
   height: 32px; }
+
+
+
+
+.software-box {
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.software-box-link {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 0 0 0;
+    text-align: center;
+    position: relative;
+    border: 1px solid #E4EDF5;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05);
+    box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    display: block;
+    text-decoration: none;
+}
+
+
+.software-box-inner {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.software-box-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 95px;
+    margin-bottom: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.software-box-logo {
+    width: 100%;
+    max-width: 120px;
+    max-height: 50px;
+}
+
+.software-box-group {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.software-box-title {
+    font-size: 16px;
+    color: #00386C;
+    height: 24px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.software-box-subtitle {
+    line-height: 16px;
+    color: rgba(0,56,108,.5);
+}
+
+.software-box-action {
+  -webkit-font-smoothing: antialiased;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #49B882;
+    line-height: 37px;
+    opacity: 0;
+    text-transform: capitalize;
+}
+
+/* On Hover */
+
+.software-box-link:hover {
+  border-color: #49B882;
+}
+
+.software-box-link:hover .software-box-inner {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+}
+
+.software-box-link:hover .software-box-group {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.software-box-link:hover .software-box-action{
+    opacity: 1;
+}
+

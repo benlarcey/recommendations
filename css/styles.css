@@ -6,6 +6,16 @@ a {
     text-decoration: none;
 }
 
+#softwareSubmit {
+    background-color: #00acc1;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
 /*Hide Results */
 
 #softwareResults {
@@ -100,7 +110,7 @@ a {
 
 .software-box-link {
     box-sizing: border-box;
-    width: 100%;
+    width: 33%;
     padding: 15px 0 0 0;
     text-align: center;
     position: relative;
@@ -191,3 +201,30 @@ a {
     opacity: 1;
 }
 
+.pos-logo {
+    max-width: 60%;
+    padding: 5%;
+    max-height: 60%;
+    margin: auto;
+}
+
+.softwareBox {
+    border: 1px solid #E4EDF5;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05);
+    border-radius: 4px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.softwareBox:hover {
+    border-color: #49B882;
+    
+}
+
+html {
+  font-size: 13px;
+}

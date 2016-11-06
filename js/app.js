@@ -63,13 +63,14 @@ $('#softwareSubmit').on('click', function() {
     var loadSoftware = function() {
         $('#resultsContainer').empty();
         
-        var verticalSelection = $('#businessType').val()
+        var verticalSelection = $('#businessType').val();
+        var businessSize = $('input[name=business-size]:checked').val();
 
         base('POS').select({
-            maxRecords: 3,
-            filterByFormula: "({Vertical} = '" + verticalSelection + "')",
+            maxRecords: 4,
+            filterByFormula: "IF({" + verticalSelection + "} > 0, IF({Max Stores} >" + businessSize + ", 1, 0), 0)",
             sort: [
-                {field: 'Weighting', direction: 'asc'}
+                {field: verticalSelection , direction: 'asc'}
             ]
         }).eachPage(function page(records, fetchNextPage) {
             records.forEach(function(record) {

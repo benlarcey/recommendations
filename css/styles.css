@@ -6,6 +6,12 @@ a {
     text-decoration: none;
 }
 
+
+html {
+  font-size: 15px;
+}
+
+
 #softwareSubmit {
     background-color: #00acc1;
     border: none;
@@ -15,6 +21,105 @@ a {
     text-transform: uppercase;
     letter-spacing: 2.5px;
 }
+
+
+.card-footer {
+    background-color: #f7f7f7;
+}
+
+.posTitle {
+    font-size: 16px;
+    color: #00386C;
+    height: 24px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.posPrice {
+    line-height: 16px;
+    color: rgba(0,56,108,.5);
+    font-size: 14px;
+}
+
+
+
+.intro-img-container {
+    position: relative;
+    height: 100vh;
+}
+
+.intro-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -80%);
+
+}
+
+.logo {
+    max-width: 102px;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+
+
+@media screen and (min-width: 769px) {
+    .nav-container {
+    padding: 40px 0 25px 50px;    
+}
+    
+    .form-container {
+        padding: 50px 0;
+        padding-right: 40px;
+    }
+    
+    
+}
+
+
+
+@media screen and (min-width: 1201px) {
+.nav-container {
+    padding-left: 100px;
+    
+}
+
+.form-container {
+    padding-left: 100px;
+    
+}
+    
+}
+
+
+/*
+.buyHardwareButton {
+    color: #00acc1;
+    border-color: #00acc1;
+    background: 0;
+    border: 2px solid #e3e3e3;
+    position: relative;
+    overflow: visible;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 20px;
+    height: auto;
+    
+    
+}
+*/
+
+
+/*
+#businessType {
+    padding: 0.8rem 0.75rem;
+}
+*/
 
 /*Hide Results */
 
@@ -223,8 +328,4 @@ a {
 .softwareBox:hover {
     border-color: #49B882;
     
-}
-
-html {
-  font-size: 13px;
 }

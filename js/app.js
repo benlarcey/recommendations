@@ -22,7 +22,7 @@ var substringMatcher = function(strs) {
   };
 };
 
-var business_types = ['Restaurant (Full Service)','Restaurant (Quick Service)','Coffee Shop / Café','Pharmacy','Salon / Barbershop','Convenience Store','Gun Shop','Clothing / Fashion','Grocery / Supermarket','Bar / Nightclub','Pub','Jewelry','Electronics','Repairs','Gym / Health Club','Gift Shop','Pet Store','Alcohol & Wine','Smoking & Vape','Sports & Outdoors','Food Truck','Stadium / Events','Takeaway Restaurant'
+var business_types = ['Restaurant (Full Service)','Restaurant (Quick Service)','Coffee Shop / Café','Pharmacy','Salon / Barbershop','Convenience Store','Gun Shop','Clothing / Fashion','Grocery / Supermarket','Bar / Nightclub','Pub','Jewelry','Electronics','Repairs','Gym / Health Club','Gift Shop','Pet Store','Alcohol & Wine','Smoking & Vape','Sports & Outdoors','Food Truck','Stadium / Events','Takeaway Restaurant','Other / General Retail'
 ];
 
 $('#businessType').typeahead({
@@ -59,6 +59,7 @@ $('#softwareSubmit').on('click', function() {
     
     var Airtable = require('airtable');
     var base = new Airtable({ apiKey: 'keyYyZzP8Btod4nXo' }).base('app7aizzZiAt0B0HI');
+    
 
     var loadSoftware = function() {
         $('#resultsContainer').empty();
@@ -67,7 +68,7 @@ $('#softwareSubmit').on('click', function() {
         var businessSize = $('input[name=business-size]:checked').val();
 
         base('POS').select({
-            maxRecords: 4,
+            maxRecords: 6,
             filterByFormula: "IF({" + verticalSelection + "} > 0, IF({Max Stores} >" + businessSize + ", 1, 0), 0)",
             sort: [
                 {field: verticalSelection , direction: 'asc'}
@@ -75,9 +76,15 @@ $('#softwareSubmit').on('click', function() {
         }).eachPage(function page(records, fetchNextPage) {
             records.forEach(function(record) {
                 console.log('Retrieved ', record.get('Name'));
+                
+                
+                
 
-                var $artistInfo = $('<div class="col-sm-6 col-md-4 ">').append($('<div class="card softwareBox">').append($('<img class="card-img-top pos-logo img-fluid d-block mx-auto">').attr('src',(record.get('Logo Link')))).append($('<div class="card-block">').append($('<h4 class="card-title">').text(record.get('Name'))).append($('<p class="card-text">').text(record.get('Short Description'))).append($('<a class="card-link">').text('Learn More').attr('href',record.get('External Link'))).append($('<a class="card-link float-xs-right">').text('Visit Website').attr('href',record.get('External Link')).attr('target','_blank'))).append($('<ul class="list-group list-group-flush">').append($('<li class="list-group-item">').append(record.get('Reviews Count')) )).append($('<div class="card-footer text-muted">').text(record.get('Platforms')) )) ;
+                var $artistInfo = $('<div class="col-sm-6 col-md-4 ">').append($('<div class="card softwareBox">').append($('<img class="card-img-top pos-logo img-fluid d-block mx-auto">').attr('src',(record.get('Logo Link')))).append($('<div class="card-block text-xs-center">').append($('<h4 class="card-title text-xs-center posTitle">').text(record.get('Name'))).append($('<p class="card-text text-xs-center">').text(record.get('Short Description'))).append($('<a class="btn btn-primary buyHardwareButton">').text('Buy Hardware').attr('href',record.get('Internal Link')).attr('target','_blank'))).append($('<ul class="list-group list-group-flush">').append($('<li class="list-group-item posPrice">').append(record.get('Price')).append($('<a class="card-link float-xs-right">').text('Visit Website').attr('href',record.get('External Link')).attr('target','_blank')) )).append($('<div class="card-footer text-muted">').text(record.get('Platforms')) )) ;
 
+                
+                
+                
                                    
                 $artistInfo.attr('data-record-id', record.getId());
 

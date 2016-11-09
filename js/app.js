@@ -44,6 +44,7 @@ function validateSelection() {
     }
     else {
         $('#softwareBox').removeClass('has-danger'),
+        $('#softwareBox').addClass('has-success'),
         $('#softwareBoxHelper').hide()
     }
 }
@@ -68,7 +69,8 @@ $('#softwareSubmit').on('click', function() {
         var businessSize = $('input[name=business-size]:checked').val();
 
         base('POS').select({
-            maxRecords: 6,
+            maxRecords: 10,
+            minLength: 0,
             filterByFormula: "IF({" + verticalSelection + "} > 0, IF({Max Stores} >" + businessSize + ", 1, 0), 0)",
             sort: [
                 {field: verticalSelection , direction: 'asc'}
@@ -101,7 +103,8 @@ $('#softwareSubmit').on('click', function() {
     loadSoftware();
     
     
-	$('#softwareForm').fadeOut(100);
+	$('#softwareForm, .form-container, .side-image').fadeOut(100);    
+    
     $('#spinner-box').delay(100).show().delay(2000).fadeOut(400, function() {
 
     $('#softwareResults').fadeIn();
@@ -117,7 +120,7 @@ $('#softwareSubmit').on('click', function() {
  
 $('#goBack').on('click', function() {
     $('#softwareResults').fadeOut(),
-    $('#softwareForm').delay(400).fadeIn()
+    $('#softwareForm, .form-container, .side-image').delay(400).fadeIn()
     
     return false;
     

@@ -1,3 +1,19 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+span,
+label{
+    font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
 #softwareForm {
     
 }
@@ -57,6 +73,10 @@ html {
 
 }
 
+.intro-text {
+font-size: 1.2rem;
+}
+
 .logo {
     max-width: 102px;
 }
@@ -114,13 +134,26 @@ html {
 }
 */
 
-
-/*
-#businessType {
-    padding: 0.8rem 0.75rem;
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
 }
-*/
-
+:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
+:focus:-ms-input-placeholder {  
+  opacity: 0;
+  -ms-transition: opacity 0.35s ease-in-out;
+  transition: opacity 0.35s ease-in-out;
+}
 /*Hide Results */
 
 #softwareResults {

@@ -394,14 +394,20 @@ input[type=text] {
  .softwareBoxContainer {
     border-radius: 4px;
     border: solid 1px #E4EDF5;
-    margin: 10px;
+    margin-top: 20px;
     transition: box-shadow 0.2s ease-in-out;
 }
 
-.softwareBoxContainer:hover {
+.softwareBoxContainer {
     -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
     -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+}
+
+.softwareBoxContainer:hover {
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
 }
 
 .softwareLogoContainer{
@@ -475,4 +481,28 @@ input[type=text] {
 .software-box-container-link a {
     text-decoration: none;
     color: initial;
+}
+
+.help-box {
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 1px solid #E4EDF5;
+}
+
+.help-box-list,
+.help-box-list a {
+    border: 1px solid #E4EDF5;
+}
+
+.help-box-list a {
+    border-left: none;
+    border-right: none;
+}
+
+.help-box-list a:first-child {
+    border-top: none;
+}
+
+.visit-external {
+    background: blue;
 }

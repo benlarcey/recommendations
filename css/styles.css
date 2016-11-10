@@ -38,6 +38,17 @@ html {
     letter-spacing: 2.5px;
 }
 
+#email-results {
+    background-color: #00acc1;
+    border: none;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
 
 .card-footer {
     background-color: #f7f7f7;
@@ -86,11 +97,26 @@ font-size: 1.2rem;
 }
 
 
+/*Radios*/
+
+
+.custom-control-input:checked~.custom-control-indicator {
+    background-color: #00acc1;
+}
+
+input[type=text] {
+    
+    padding: 15px;
+    
+    
+}
+
+   .nav-container {
+    padding: 40px 0;    
+}
 
 @media screen and (min-width: 769px) {
-    .nav-container {
-    padding: 40px 0 25px 50px;    
-}
+ 
     
     .form-container {
         padding: 50px 0;
@@ -361,4 +387,92 @@ font-size: 1.2rem;
 .softwareBox:hover {
     border-color: #49B882;
     
+}
+
+
+
+ .softwareBoxContainer {
+    border-radius: 4px;
+    border: solid 1px #E4EDF5;
+    margin: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.softwareBoxContainer:hover {
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+}
+
+.softwareLogoContainer{
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom:20px;
+}
+
+
+.softwareLogo {
+       position:absolute;
+        width:100%;
+        height:100%;
+}
+
+.softwareLogo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width:100%;
+
+}
+
+.softwareProperties {
+    margin-right: none;
+    padding-right: 0;
+}
+
+.softwareProperties li,
+.softwareProperties a {
+    border-color: #E4EDF5;
+    border-radius: 0!important;
+    border-right: none;
+    padding: 10px 20px
+}
+
+.softwareProperties .list-group-item:first-child {
+    border-top-width: 0;
+}
+
+.softwareProperties .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.softwareDescription {
+    padding: 1.5rem;
+}
+
+.softwareIcon {
+    margin-right: 0.8rem;
+}
+
+@media screen and (max-width: 769px) {
+    .software-properties-container {
+        padding-left: 0;
+
+    }
+
+    .softwareProperties .list-group-item:first-child {
+        border-left-width: 0!important;
+        border-top-width: 1px!important;
+    }
+}
+
+.software-box-container-link div,
+.software-box-container-link a {
+    text-decoration: none;
+    color: initial;
 }

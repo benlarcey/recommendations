@@ -23,16 +23,17 @@ span.twitter-typeahead .tt-suggestion {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 2;
   color: #373a3c;
   text-align: inherit;
   white-space: nowrap;
   background: none;
+  cursor: pointer;
   border: 0; }
 span.twitter-typeahead .tt-suggestion:focus, .dropdown-item:hover, span.twitter-typeahead .tt-suggestion:hover {
     color: #2b2d2f;
     text-decoration: none;
-    background-color: #f5f5f5; }
+    background-color: #f7f7f7; }
 span.twitter-typeahead .active.tt-suggestion, span.twitter-typeahead .tt-suggestion.tt-cursor, span.twitter-typeahead .active.tt-suggestion:focus, span.twitter-typeahead .tt-suggestion.tt-cursor:focus, span.twitter-typeahead .active.tt-suggestion:hover, span.twitter-typeahead .tt-suggestion.tt-cursor:hover {
     color: #fff;
     text-decoration: none;

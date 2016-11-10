@@ -6,6 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <link rel="dns-prefetch" href="https://storekit.co.uk" />
+    <link rel="dns-prefetch" href="https://cdn.storekit.co.uk" />
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
@@ -123,41 +127,27 @@
             <div class="spinner-text">Finding software...</div>
         </div>
     </div>
-
     <div class="container-fluid" id="softwareResults">
         <div class="row">
-            <div class="col-sm-12 mt-3 pt-3">
-                 <h4>Results</h4>
+            <div class="col-sm-12 pt-3">
                 <div class="clearfix mt-2">
-                    <button class="btn btn-secondary float-xs-left" id="goBack">Go back</button>
-                    <form class="form-inline float-xs-right">
-                        <div class="form-group">
-                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-                        </div>
+                    <div class="col-sm-12 col-md-10 col-xl-8 offset-md-1 offset-xl-1">
+                        <button class="btn btn-secondary float-xs-left" id="goBack">Go back</button>
+                        <form class="form-inline float-xs-right">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
 
-                        <button type="submit" class="btn btn-primary">Email me these results</button>
-                    </form>
+                            <button type="submit" class="btn btn-primary" id="email-results">Email me these results</button>
+                        </form>
+                    </div>
                 </div>
-
-
-
-
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 mt-2">
-                
-               
-<!--                <div class="card-deck-wrapper">-->
-                    <div id="resultsContainer" class="row">
-<!--                </div>        -->
+            <div class="row" id="resultsContainer">
+
             </div>
-        </div>
     </div>
-    </div>
-
-
 </body>
-
 </html>

@@ -33,9 +33,21 @@ html {
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 2.5px;
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    border-radius: 3px;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    
+}
+
+#softwareSubmit:hover {
+      opacity: 0.8;
 }
 
 #email-results {
@@ -100,9 +112,11 @@ font-size: 1.2rem;
 /*Radios*/
 
 
+/*
 .custom-control-input:checked~.custom-control-indicator {
     background-color: #00acc1;
 }
+*/
 
 input[type=text] {
     
@@ -112,7 +126,7 @@ input[type=text] {
 }
 
    .nav-container {
-    padding: 40px 0;    
+    padding: 25px 0;    
 }
 
 @media screen and (min-width: 769px) {
@@ -184,6 +198,8 @@ input[type=text] {
 
 #softwareResults {
     display: none;
+    background-color: #f7f7f7;
+    padding-top: 1.5rem;
 }
 
 
@@ -392,10 +408,11 @@ input[type=text] {
 
 
  .softwareBoxContainer {
-    border-radius: 4px;
-    border: solid 1px #E4EDF5;
+    border-radius: 0px;
+    border: solid 0px #E4EDF5;
     margin-top: 20px;
     transition: box-shadow 0.2s ease-in-out;
+     background-color: #fff;
 }
 
 .softwareBoxContainer {
@@ -410,7 +427,7 @@ input[type=text] {
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
 }
 
-.softwareLogoContainer{
+.software-logoContainer{
     position: relative;
     width: 100%;
     padding-bottom: 100%;
@@ -418,22 +435,32 @@ input[type=text] {
 }
 
 
-.softwareLogo {
-       position:absolute;
-        width:100%;
-        height:100%;
-}
-
-.softwareLogo img {
-    position: absolute;
+.software-logo {
+ position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    max-height: 100%;
-    max-width:100%;
 
+    text-align:center; /* Align center inline elements */
+    font: 0/0 a;
+}
+
+.software-logo:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.software-logo img {
+  vertical-align: middle;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.helper {
+    padding-top: 110%; /* forces 1:1 aspect ratio */
 }
 
 .softwareProperties {
@@ -495,14 +522,28 @@ input[type=text] {
 }
 
 .help-box-list a {
-    border-left: none;
-    border-right: none;
+    border-left-width: 0;
+    border-right-width: 0;
 }
 
 .help-box-list a:first-child {
     border-top: none;
 }
 
-.visit-external {
-    background: blue;
+.help-box-list a:last-child {
+    border-bottom: none;
+}
+
+.visit-external:hover {
+    background-color: #00acc1;
+    color: #fff;
+}
+
+.visit-internal:hover {
+    background-color: #00acc1;
+    color: #fff;
+}
+
+.short-description {
+    color: #777777;
 }

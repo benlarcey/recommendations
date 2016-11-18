@@ -16,6 +16,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
 
     <link rel='stylesheet' href="./css/styles.css" type="text/css" />
     <link rel='stylesheet' href="./css/typeahead.css" type="text/css" />
@@ -44,71 +45,71 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-7 col-md-8">
-                
+
                 <div class="nav-container">
                     <a href="https://storekit.co.uk" target="_blank"><img src="https://cdn.storekit.co.uk/wp-content/uploads/2016/07/logo-2.png" class="logo" /></a>
                 </div>
-                
+
                 <div class="form-container">
                     <div class="row">
-                        
-                         <div class="col-sm-11 col-md-7 col-lg-8">
-                                <h1>Hi there!<br>Let’s get started?
+
+                        <div class="col-sm-11 col-md-7 col-lg-8">
+                            <h1>Hi there!<br>Let’s get started?
                                     </h1>
                         </div>
                         <div class="col-sm-12 col-md-9 col-lg-10">
                             <p class="intro-text lead text-muted">Find and compare point of sale software with our recommendation engine. Tell us a few details about your business and we'll show you what will work best for you: </p>
-                        </div>    
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 col-md-9 col-lg-10">
-                            
-                <form id="softwareForm">
 
-                    <!-- fieldsets -->
-                    <fieldset>
-<!--                        <h2 class="fs-title">Find POS Software</h2>-->
-                        <div class="form-group mt-2" id="softwareBox">
-                            <label for="businessType">What type of business do you have?</label>
-                            <input type="text" class="form-control typeahead" id="businessType" aria-describedby="emailHelp" placeholder="e.g. Restaurant, Salon, Coffee Shop" autocomplete="off">
-                            <small class="form-control-feedback form-text" style="display:none;" id="softwareBoxHelper">*Please try a different category</small>
+                            <form id="softwareForm">
 
+                                <!-- fieldsets -->
+                                <fieldset>
+                                    <!--                        <h2 class="fs-title">Find POS Software</h2>-->
+                                    <div class="form-group mt-2" id="softwareBox">
+                                        <label for="businessType">What type of business do you have?</label>
+                                        <input type="text" class="form-control typeahead" id="businessType" aria-describedby="emailHelp" placeholder="e.g. Restaurant, Salon, Coffee Shop" autocomplete="off">
+                                        <small class="form-control-feedback form-text" style="display:none;" id="softwareBoxHelper">*Please try a different category</small>
+
+                                    </div>
+
+                                    <label>How many physical locations do you have?</label>
+
+                                    <div class="custom-controls">
+                                        <label class="custom-control custom-radio">
+                                            <input id="radioStacked1" name="business-size" type="radio" class="custom-control-input" value="1">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">1 Store</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input id="radioStacked2" name="business-size" type="radio" class="custom-control-input" value="5">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">2 - 5 Stores</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input id="radioStacked3" name="business-size" type="radio" class="custom-control-input" value="10">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">6 - 10 Stores</span>
+                                        </label>
+                                        <label class="custom-control custom-radio">
+                                            <input id="radioStacked3" name="business-size" type="radio" class="custom-control-input" value="11">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">10+ Stores</span>
+                                        </label>
+                                    </div>
+                                    <!--    <input type="button" name="next" class="next action-button" value="Next" />-->
+                                    <button class="btn btn-primary mt-2 btn-block" id="softwareSubmit">Continue</button>
+
+                                </fieldset>
+
+
+
+                            </form>
                         </div>
-
-                        <label>How many physical locations do you have?</label>
-
-                        <div class="custom-controls">
-                            <label class="custom-control custom-radio">
-                                <input id="radioStacked1" name="business-size" type="radio" class="custom-control-input" value="1">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">1 Store</span>
-                            </label>
-                            <label class="custom-control custom-radio">
-                                <input id="radioStacked2" name="business-size" type="radio" class="custom-control-input" value="5">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">2 - 5 Stores</span>
-                            </label>
-                            <label class="custom-control custom-radio">
-                                <input id="radioStacked3" name="business-size" type="radio" class="custom-control-input" value="10">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">6 - 10 Stores</span>
-                            </label>
-                            <label class="custom-control custom-radio">
-                                <input id="radioStacked3" name="business-size" type="radio" class="custom-control-input" value="11">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">10+ Stores</span>
-                            </label>
-                        </div>
-                        <!--    <input type="button" name="next" class="next action-button" value="Next" />-->
-                        <button class="btn btn-primary mt-2 btn-block" id="softwareSubmit">Continue</button>
-
-                    </fieldset>
-
-
-
-                    </form>
-                            </div>
-                </div>
+                    </div>
                 </div>
 
             </div>
@@ -127,19 +128,14 @@
     </div>
     <div class="container-fluid" id="softwareResults">
         <div class="row">
-           
-                    <div class="col-sm-12 col-md-10 col-xl-8 offset-md-1 offset-xl-1">
-                        <button class="btn btn-secondary float-xs-left" id="goBack">Go back</button>
-                        <form class="form-inline float-xs-right">
-                            <div class="form-group">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-                            </div>
 
-                            <button type="submit" class="btn btn-primary" id="email-results">Email me these results</button>
-                        </form>
-                    </div>
-            
+            <div class="col-sm-12 col-xl-9 ">
+                <button class="btn btn-secondary float-xs-left" id="goBack">Go back</button>
+<!--                <div class="filter" data-filter=".free">Free</div>-->
+                    <button type="submit" class="btn btn-primary" id="email-results">Email me these results</button>
+                    <button type="button" class="btn btn-primary btn-lg float-xs-right" data-toggle="modal" data-target="#saveModal" id="email-results">Save your results</button>
+            </div>
+
         </div>
         <div class="row mb-3">
             <div class="col-sm-12 col-xl-9">
@@ -149,20 +145,46 @@
             </div>
             <div class="col-xs-12 col-xl-3">
                 <div class="card help-box">
-<!--                  <img class="card-img-top" src="..." alt="Card image cap">-->
-                  <div class="card-block">
-                    <h4 class="card-title">Need Help?</h4>
-                    <p class="card-text"></p>
-                  </div>
-                  <div class="list-group help-box-list">
-                   <a href="#" onclick="Intercom('showNewMessage');return false;" class="list-group-item list-group-item-action"><img class="icon icons8-Chat" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAE/0lEQVRoQ+1aWXIbNxB9DfI/9AmsnCD2CSyfwPQJTJ0gZDj0X0iQn+aMKZ3A9AlCn8DMCSKdIMoJQv9z0KkGF82G2bhYcgVVqlLVNBr90MDrBSTUHL9//PhKhdwG8YuNCroAIH8yVgDfyj9MtJS/BtGd7vVWNZcrPY1KSwIY+v47AtoAtavMe5DlBbOaTwa/fak3v3hWISA9m7VMGL4hkI54oFhzvsSKwd2J530+VFFyfi4g/eHDCyb1CUTbY3Xs5XFPbK70YLA8lmYnoGEQjIghXskcDNwBvFTAEswrNJv3ute7F2E9m11gvb4AUcsAlwDaBHru1mW9dXMMUJmARn7wCUAnuQAzfwNhoRoNvTO+rBEC0oShBqNNRD9lzJuPvf5VWX0uuRQgJxjwzRbIQUy1vZOaQL+eAlQM0ND3r5MLiVcUuH3Mc26P5XR6aUCLpLcYfDPxvG5dT+0ByQJM6mtUkQXD5lK/f29jyrGHkI4htUyCIjav627gHtDID/6O0vKpwew2JxMU8+144L2ss4EWkJ4GXSbMogoO2aWqhmSdDiJc6X5/XlWXBZTyzoHnuKoRIp+6vzW9RDZ4qsZfMe801LNz5F3RNYX9ODT/xuwAv9Wet6iyQZTcGWZ8mQz6NXO1KkunZYfTYEGEN4kv92AsqKluysQ+Gk6DJRFe7ZRQjV05DMbDbO37bQb9kaNvTg3Vyzs9aUAHUOahwLLIIUPnisBXrqNIIz/g6KSx1y/MwA81PG9+0p48b2WlSk8ZkGBN5X80nPqraKQ+Z/xJ7n7JIxeblkyVnhopZJ7AKJEJIE2E0U7yEdJ2mSu7oob6WdjPFVjloy3WzjWyAmuVtZkxngz62jLa0A9uCfhl7yXw54nnpQq8KgtUlc0qXSrqWI29/rNNcpoR0M4ZYOuQQRZYIbR9zElmDNJbo4Z6eeqjt80lpQ5rVfRISlyO3UOBJzX/OrxNFFsrMuHrUxZ4rBpHASPohNBiWYEjl8pNNeru6nYtacYc7JkIQ/+ZSnN0EHSYIQvFBjF6etC/rgtgN8+y2dqMQKjdN3DZwIw0IEsSGaAOjU/SxuLQSLw7GXs6AVkqT9QmO54v4yExPmR+TiFaBL4EST9838gvo6KWTIwUkhqSZXkejdsmPqN7wpZxKYBiY2apkNm0yCjLt3Jy33bPKKUWPoWQdKkmA6/laAX7XwGSnrQdyfuziR1qFpU5hZFVdMZSn+jELELYlRTnuNhVQDxsOH9TzcaFTU5jYDYdoFigE+8oDjWrhvSinQwlLnc04evYWGlOrHyIxAehVWlnJQOdZN3OOyJUqWA0ms1bE5plNMmtZFVN4VSBt9PjaCE5l2HwPwroRpsVrl51TVsLp3FGVZCXnGYqtECItKtNu3kuOb2nXK8UD8mpI+XZXzzgThGuy/SbC96ACne+SCDvySVOCvJmQ9QB2yd6GSv75NhUizplxOYNSEmJv29kFhlb5nte1nKWHpwFRtQh0LsyBhfJ5OWVZwEUCw2+3zZsX9Ulx5PIvi/9i4BEvttyO0v+7IBcRttH5bXpANwtE89c70ePBlA0Hpq1uc54hUjuxf22RRB7xH50gPbANvdunvf7BoAXY897G0X6aAGJkZb+16ZbcAxj/e1HDSh2DMNQftvgYsk9qCcBKAKsBWPaxqAD4gs5jjaXVJjvAv6TAlSG1v8HVGaXvqfMD+eh/wDapqiFy9lvUgAAAABJRU5ErkJggg==" width="20" height="20"> Live Chat</a>
-                  <a href="tel:+442038741470" class="list-group-item list-group-item-action"><img class="icon icons8-Phone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEvUlEQVRoQ81azZnaSBCtanFfMjCOwOMIlolgZyIwE4GZT8JHkDga8cFEsEwExhEYR7BMBIsjWO/ZqMtftX4sCUmtFjKII2pJ9bpeVb2qFkLFz/X9OyKYAeINABwQwXNte1N1z7WuYdGL3dWqT4FcAcAofx1J3rqTye5aBpe99wSIAnEMvrAXiOh/Aei6E3vtLpZjQmBwB7TEW/fx8XuXwGSAuB8/3pCwvgBAnwBehAxG7ocP+9jgqb/cI8AbANp6jnPfSSAnICwxzO+6u1oNKJD/MgAEuncdZ9sVMMojkYH/hJ6gZ2FZ4zLqTBdLFxFmAPAdLfG6KxTDbEzA5/nEvtPtckwxAnqaO85Yt/4S13Hq+2sEfK9iooBOhVktjCX2IHQli+HMXzLnB6YGpSjWiSzGQIh31nPswppSRYsuUYypdUDAV1HgHkz4HGW6TlAMp4vlDhH+bJpO0xTzHPu1yUa0uZaBqHR6TgaK6dnEq22BwRQ9Dk12NNJl/zWNs9aA8IOSOGkgCGMNRgRf5xN72JZhps9RmSpFr+e545wo3rKHRt7g9N03Td+mhurWxxKFZbuihwnPkw24sjdC7Rf9pr6/QcB3rLXqeCUjIBtQUrfDptcTIBnDZPA2Ld+LHjrz/U8AeFcXuKlhpusz1fxXTaCd5zi3pbGR1lqhAjYqpKZG1lmfbaxWq748BgdE/AMJHrkzLBSNNdfVMaCtNaetLg8cAD9F/Qa3tIW7rQYT4bpOKOBCoThdLLeI8BdANcUyTZYMbnVx1dbuFz2ndIoig2DPYpIIvPnEdsuMiLMdEO2xZ91eq2Msle7uYjEkFDyIqKQOF0UZyJ0aSlwRTGUPkuvPy+OlA2C0zVQSL5rd5jokj8GeM941PKMFkqGOZp7FSlqi2CkwQDu0rPtLxYwWCMdIZrcBNp5jP1QVywTMBWOmFhAFJrXbVcUyv/ZSNKsNRBm4XI6I4G+VyRAeqibzGZoZeIapDD9+DExrkhEQYzCcAAK5TVIzyYcyA0OlAO8BMG7ODsjra07+jYE0APOrzvCYleR92riwXuEsBSAbfgRr7AlPlzQaAWkGJuCJ5ju+lxBcIcQzBZJnyKojVUcYAscxXVM1jC9rvdMYiCkYXp8zLtl5lkGiJ9Yn039OMMLahEcZjLbcO2cBaQKGqSQBt1xriOCz6Ame/Ff2M3W8czaQPBgCGs8d56lK6TbJTCoLVninFSB5MKApmufI+TLvtAYkBiMlrSOJskXLetBlmyag8t7hmtYqkJKqznrrt/T0maONJjuiu0dps7gQFtQO3f0m15O5s8lNJmuVaj7KTdgyh7VjbtueyTN0a5NxLcBL69TKvzwbnErac9ycTbX0KTQfifx2ICpuUrWDpzME5OpStC59UyD5gGkQDwgvAkSByVFNNV5SPpqq3MwpdOoA92JA4h1mlSsBWHe9iv7boKVEYS26zfwltxEjAvomLOsmTu8XB5Lyzjj68CDCQ1skeiqT7SffyJAcpr15FSCJd1SaDtxYFUf/H4BgS4A70cMX9pSS+oCr5EOfHAi+76pAUoD6cJQjiTROUe4k3qOPGu6KaNgJIGmLwxbZ4s9IhoA0UNNOoG8AsBWW5ZZJnp9zEE235oRLjAAAAABJRU5ErkJggg==" width="20" height="20"> Call Us</a>
-                  </div>
-                 
+<!--                                      <img class="card-img-top" src="..." alt="Card image cap">-->
+                    <div class="list-group help-box-list">
+                        <a href="#" onclick="Intercom('showNewMessage');return false;" class="list-group-item list-group-item-action help-box-link"><img class="icon icons8-Chat" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAE/0lEQVRoQ+1aWXIbNxB9DfI/9AmsnCD2CSyfwPQJTJ0gZDj0X0iQn+aMKZ3A9AlCn8DMCSKdIMoJQv9z0KkGF82G2bhYcgVVqlLVNBr90MDrBSTUHL9//PhKhdwG8YuNCroAIH8yVgDfyj9MtJS/BtGd7vVWNZcrPY1KSwIY+v47AtoAtavMe5DlBbOaTwa/fak3v3hWISA9m7VMGL4hkI54oFhzvsSKwd2J530+VFFyfi4g/eHDCyb1CUTbY3Xs5XFPbK70YLA8lmYnoGEQjIghXskcDNwBvFTAEswrNJv3ute7F2E9m11gvb4AUcsAlwDaBHru1mW9dXMMUJmARn7wCUAnuQAzfwNhoRoNvTO+rBEC0oShBqNNRD9lzJuPvf5VWX0uuRQgJxjwzRbIQUy1vZOaQL+eAlQM0ND3r5MLiVcUuH3Mc26P5XR6aUCLpLcYfDPxvG5dT+0ByQJM6mtUkQXD5lK/f29jyrGHkI4htUyCIjav627gHtDID/6O0vKpwew2JxMU8+144L2ss4EWkJ4GXSbMogoO2aWqhmSdDiJc6X5/XlWXBZTyzoHnuKoRIp+6vzW9RDZ4qsZfMe801LNz5F3RNYX9ODT/xuwAv9Wet6iyQZTcGWZ8mQz6NXO1KkunZYfTYEGEN4kv92AsqKluysQ+Gk6DJRFe7ZRQjV05DMbDbO37bQb9kaNvTg3Vyzs9aUAHUOahwLLIIUPnisBXrqNIIz/g6KSx1y/MwA81PG9+0p48b2WlSk8ZkGBN5X80nPqraKQ+Z/xJ7n7JIxeblkyVnhopZJ7AKJEJIE2E0U7yEdJ2mSu7oob6WdjPFVjloy3WzjWyAmuVtZkxngz62jLa0A9uCfhl7yXw54nnpQq8KgtUlc0qXSrqWI29/rNNcpoR0M4ZYOuQQRZYIbR9zElmDNJbo4Z6eeqjt80lpQ5rVfRISlyO3UOBJzX/OrxNFFsrMuHrUxZ4rBpHASPohNBiWYEjl8pNNeru6nYtacYc7JkIQ/+ZSnN0EHSYIQvFBjF6etC/rgtgN8+y2dqMQKjdN3DZwIw0IEsSGaAOjU/SxuLQSLw7GXs6AVkqT9QmO54v4yExPmR+TiFaBL4EST9838gvo6KWTIwUkhqSZXkejdsmPqN7wpZxKYBiY2apkNm0yCjLt3Jy33bPKKUWPoWQdKkmA6/laAX7XwGSnrQdyfuziR1qFpU5hZFVdMZSn+jELELYlRTnuNhVQDxsOH9TzcaFTU5jYDYdoFigE+8oDjWrhvSinQwlLnc04evYWGlOrHyIxAehVWlnJQOdZN3OOyJUqWA0ms1bE5plNMmtZFVN4VSBt9PjaCE5l2HwPwroRpsVrl51TVsLp3FGVZCXnGYqtECItKtNu3kuOb2nXK8UD8mpI+XZXzzgThGuy/SbC96ACne+SCDvySVOCvJmQ9QB2yd6GSv75NhUizplxOYNSEmJv29kFhlb5nte1nKWHpwFRtQh0LsyBhfJ5OWVZwEUCw2+3zZsX9Ulx5PIvi/9i4BEvttyO0v+7IBcRttH5bXpANwtE89c70ePBlA0Hpq1uc54hUjuxf22RRB7xH50gPbANvdunvf7BoAXY897G0X6aAGJkZb+16ZbcAxj/e1HDSh2DMNQftvgYsk9qCcBKAKsBWPaxqAD4gs5jjaXVJjvAv6TAlSG1v8HVGaXvqfMD+eh/wDapqiFy9lvUgAAAABJRU5ErkJggg==" width="20" height="20"><span>Chat with an advisor</span></a>
+                        <a href="tel:+442038741470" class="list-group-item list-group-item-action help-box-link"><img class="icon icons8-Phone" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEvUlEQVRoQ81azZnaSBCtanFfMjCOwOMIlolgZyIwE4GZT8JHkDga8cFEsEwExhEYR7BMBIsjWO/ZqMtftX4sCUmtFjKII2pJ9bpeVb2qFkLFz/X9OyKYAeINABwQwXNte1N1z7WuYdGL3dWqT4FcAcAofx1J3rqTye5aBpe99wSIAnEMvrAXiOh/Aei6E3vtLpZjQmBwB7TEW/fx8XuXwGSAuB8/3pCwvgBAnwBehAxG7ocP+9jgqb/cI8AbANp6jnPfSSAnICwxzO+6u1oNKJD/MgAEuncdZ9sVMMojkYH/hJ6gZ2FZ4zLqTBdLFxFmAPAdLfG6KxTDbEzA5/nEvtPtckwxAnqaO85Yt/4S13Hq+2sEfK9iooBOhVktjCX2IHQli+HMXzLnB6YGpSjWiSzGQIh31nPswppSRYsuUYypdUDAV1HgHkz4HGW6TlAMp4vlDhH+bJpO0xTzHPu1yUa0uZaBqHR6TgaK6dnEq22BwRQ9Dk12NNJl/zWNs9aA8IOSOGkgCGMNRgRf5xN72JZhps9RmSpFr+e545wo3rKHRt7g9N03Td+mhurWxxKFZbuihwnPkw24sjdC7Rf9pr6/QcB3rLXqeCUjIBtQUrfDptcTIBnDZPA2Ld+LHjrz/U8AeFcXuKlhpusz1fxXTaCd5zi3pbGR1lqhAjYqpKZG1lmfbaxWq748BgdE/AMJHrkzLBSNNdfVMaCtNaetLg8cAD9F/Qa3tIW7rQYT4bpOKOBCoThdLLeI8BdANcUyTZYMbnVx1dbuFz2ndIoig2DPYpIIvPnEdsuMiLMdEO2xZ91eq2Msle7uYjEkFDyIqKQOF0UZyJ0aSlwRTGUPkuvPy+OlA2C0zVQSL5rd5jokj8GeM941PKMFkqGOZp7FSlqi2CkwQDu0rPtLxYwWCMdIZrcBNp5jP1QVywTMBWOmFhAFJrXbVcUyv/ZSNKsNRBm4XI6I4G+VyRAeqibzGZoZeIapDD9+DExrkhEQYzCcAAK5TVIzyYcyA0OlAO8BMG7ODsjra07+jYE0APOrzvCYleR92riwXuEsBSAbfgRr7AlPlzQaAWkGJuCJ5ju+lxBcIcQzBZJnyKojVUcYAscxXVM1jC9rvdMYiCkYXp8zLtl5lkGiJ9Yn039OMMLahEcZjLbcO2cBaQKGqSQBt1xriOCz6Ame/Ff2M3W8czaQPBgCGs8d56lK6TbJTCoLVninFSB5MKApmufI+TLvtAYkBiMlrSOJskXLetBlmyag8t7hmtYqkJKqznrrt/T0maONJjuiu0dps7gQFtQO3f0m15O5s8lNJmuVaj7KTdgyh7VjbtueyTN0a5NxLcBL69TKvzwbnErac9ycTbX0KTQfifx2ICpuUrWDpzME5OpStC59UyD5gGkQDwgvAkSByVFNNV5SPpqq3MwpdOoA92JA4h1mlSsBWHe9iv7boKVEYS26zfwltxEjAvomLOsmTu8XB5Lyzjj68CDCQ1skeiqT7SffyJAcpr15FSCJd1SaDtxYFUf/H4BgS4A70cMX9pSS+oCr5EOfHAi+76pAUoD6cJQjiTROUe4k3qOPGu6KaNgJIGmLwxbZ4s9IhoA0UNNOoG8AsBWW5ZZJnp9zEE235oRLjAAAAABJRU5ErkJggg==" width="20" height="20"><span>020 3874 1470</span></a>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
+    
+<!--   Save Results Modal-->
+    
+    <div class="modal fade" id="saveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Save your results</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-inline">
+                    <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="email-results">Email me these results</button>
+                </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     
 <!--Footer Content-->
 <script>

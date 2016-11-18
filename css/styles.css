@@ -237,8 +237,8 @@ input[type=text] {
     border-right-color: #00acc1;
     border-radius: 50%;
     display: inline-block;
-    -webkit-animation: spin 0.4s linear;
-            animation: spin 0.4s linear;
+    -webkit-animation: spin 0.5s linear;
+            animation: spin 0.5s linear;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
     width: 3em;
@@ -410,21 +410,27 @@ input[type=text] {
  .softwareBoxContainer {
     border-radius: 0px;
     border: solid 0px #E4EDF5;
-    margin-top: 20px;
+    margin-top: 25px;
     transition: box-shadow 0.2s ease-in-out;
      background-color: #fff;
 }
 
 .softwareBoxContainer {
-    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
-    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
-    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
 }
 
 .softwareBoxContainer:hover {
-    -webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
-    box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 .software-logoContainer{
@@ -432,6 +438,7 @@ input[type=text] {
     width: 100%;
     padding-bottom: 100%;
     margin-bottom:20px;
+    
 }
 
 
@@ -511,9 +518,12 @@ input[type=text] {
 }
 
 .help-box {
-    margin-top: 20px;
+    margin-top: 25px;
     margin-right: 20px;
-    border: 1px solid #E4EDF5;
+    border: none;
+    border-radius: 0;
+ 
+    
 }
 
 .help-box-list,
@@ -534,6 +544,10 @@ input[type=text] {
     border-bottom: none;
 }
 
+.help-box-link span {
+    padding-left: 12px
+}
+
 .visit-external:hover {
     background-color: #00acc1;
     color: #fff;
@@ -546,4 +560,57 @@ input[type=text] {
 
 .short-description {
     color: #777777;
+}
+
+/*Button Overrides */
+
+#goBack {
+    border-radius: 1px;
+    margin-left: 8.33%;   
+    
+}
+
+.form-group-wide {
+    width: 50%;
+}
+
+.form-group-wide input {
+    width: 100%;
+}
+
+
+
+#email-input {
+    width: 100%;
+}
+
+#email-results-button {
+    width: 49%;
+}
+
+#email-results,
+#email-results-button{
+    background-color: #00acc1;
+    border-radius: 0;
+    border: none;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+#email-input {
+    border-radius: 0;
+}
+
+/*Modal*/
+
+#saveModal {
+    top: 30%;
+}
+
+.modal-body {
+    padding: 2em 1em
 }

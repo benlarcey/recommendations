@@ -144,10 +144,11 @@ $('#softwareSubmit').on('click', function() {
                 };
                 
                 
+//                var freePrice = record.get('Price');
 
 
                 var $softwareBox = $('<div class="col-xs-12 col-sm-10 offset-sm-1 col-xl-11 offset-xl-1">\
-                    <div class="row softwareBoxContainer">\
+                    <div class="row softwareBoxContainer mix" >\
                         <div class="col-md-2 hidden-sm-down">\
                                 <div class="helper"></div>\
                                 <div class="software-logo">\
@@ -178,7 +179,8 @@ $('#softwareSubmit').on('click', function() {
 
             fetchNextPage();
         }, function done(error) {
-            console.log(error);
+            if (error) {
+            console.log(error)};
         });
     };
 
@@ -209,6 +211,7 @@ $('#goBack').on('click', function() {
     
 });
     
-
+$('#softwareResult').mixItUp(); 
+    
 
 });

@@ -13,6 +13,10 @@ label{
 }
 
 
+body {
+    min-height: 100vh;
+}
+
 
 #softwareForm {
     
@@ -25,6 +29,10 @@ a {
 
 html {
   font-size: 15px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ededee;
 }
 
 
@@ -101,11 +109,16 @@ font-size: 1.2rem;
 }
 
 .logo {
-    max-width: 102px;
+    max-width: 120px;
 }
 
 .form-container {
     padding: 20px;
+}
+
+.intro-header {
+    color: #4f5057;
+    font-weight: 600;
 }
 
 
@@ -126,7 +139,7 @@ input[type=text] {
 }
 
    .nav-container {
-    padding: 25px 0;    
+    padding: 16px 0;    
 }
 
 @media screen and (min-width: 769px) {
@@ -199,7 +212,9 @@ input[type=text] {
 #softwareResults {
     display: none;
     background-color: #f7f7f7;
-    padding-top: 1.5rem;
+    padding-top: 2.5rem;
+    min-height: 92vh;
+    min-height: calc(100vh - 73px);
 }
 
 
@@ -558,16 +573,40 @@ input[type=text] {
     color: #fff;
 }
 
+
 .short-description {
     color: #777777;
 }
+
+
+.additional-filters {
+    border: 1px solid #E4EDF5;
+}
+
+.additional-filters-header {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+
+}
+
 
 /*Button Overrides */
 
 #goBack {
     border-radius: 1px;
-    margin-left: 8.33%;   
-    
+    margin-left: 8.33%;
+    background-color: transparent;
+    border-radius: 0;
+    border: solid 2px #00acc1;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #00acc1;        
 }
 
 .form-group-wide {
@@ -613,4 +652,8 @@ input[type=text] {
 
 .modal-body {
     padding: 2em 1em
+}
+
+#resultsContainer .mix{
+	display: none;
 }

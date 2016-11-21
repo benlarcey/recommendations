@@ -159,21 +159,17 @@ $('#softwareSubmit').on('click', function() {
                         return '';
                     }
                 }
-                
-                
-//                var freePrice = record.get('Price');
-
 
                 var $softwareBox = $('<div class="col-xs-12 col-sm-10 offset-sm-1 col-xl-11 offset-xl-1 mix ' + record.get('Payments') + '">\
                     <div class="row softwareBoxContainer" >\
-                        <div class="col-md-2 hidden-sm-down ' + i + '">\
+                        <div class="col-md-2 hidden-sm-down ' + topPOS + '">\
                                 <div class="helper"></div>\
                                 <div class="software-logo">\
                                     <img src="' + record.get('Logo Link') + '" class="img-fluid">\
                                 </div>\
                         </div>\
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7 softwareDescription">\
-                            <div><h4>' + record.get('Name') + '</h4></div>\
+                            <div><h5>' + record.get('Name') + '</h5></div>\
                             <div class=""><p class="short-description">' + record.get("Short Description") + '</p></div>\
                         </div>\
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 pr-0 software-properties-container">\
@@ -188,8 +184,7 @@ $('#softwareSubmit').on('click', function() {
                     </div>' )
                 
                 
-                                   
-//                $artistInfo.attr('data-record-id', record.getId());
+//                $softwareBox.attr('data-record-id', record.getId());
 
                 $('#resultsContainer').append($softwareBox);
             });
@@ -197,7 +192,26 @@ $('#softwareSubmit').on('click', function() {
             fetchNextPage();
         }, function done(error) {
             if (error) {
-            console.log(error)};
+            console.log(error)}
+            
+            else {
+                
+                
+                   
+                $('#spinner-box').delay(100).show().delay(2000).fadeOut(400, function() {
+                $('#softwareResults').fadeIn();
+                $('#nav-top').addClass('border-bottom');
+                $('#resultsContainer').mixItUp({
+                    animation: {
+                        duration: 780,
+                        effects: 'fade stagger(90ms) translateY(100%)',
+                        easing: 'ease'
+                    }}); 
+
+
+                });
+                
+            };
         });
         
             $('#selected-business-type').empty().append( verticalSelection );
@@ -219,30 +233,9 @@ $('#softwareSubmit').on('click', function() {
 
     loadSoftware();
     
-    $('#nav-top').addClass('border-bottom');
-	$('#softwareForm, .form-container, .side-image').fadeOut(100);    
+    $('#softwareForm, .form-container, .side-image').fadeOut(100); 
     
-    $('#spinner-box').delay(100).show().delay(2000).fadeOut(400, function() {
-
-    $('#softwareResults').fadeIn();
-        
-        
-    $('#resultsContainer').mixItUp({
-        
-        
-	animation: {
-		duration: 780,
-		effects: 'fade stagger(90ms) translateY(100%)',
-		easing: 'ease'
-	}
-        
-        
-        
-        
-    }); 
-
-
-    });
+   
     
     
     return false;

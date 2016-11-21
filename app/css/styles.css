@@ -97,8 +97,9 @@ html {
 }
 
 .intro-img {
+max-width: 100%;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-60%, -80%);
 

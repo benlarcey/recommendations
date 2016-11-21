@@ -657,3 +657,7 @@ input[type=text] {
 #resultsContainer .mix{
 	display: none;
 }
+
+.intro-img {
+    max-width: 100%
+}

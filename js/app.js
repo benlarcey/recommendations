@@ -203,7 +203,7 @@ $('#softwareSubmit').on('click', function() {
             console.log(error)}
             else {
                     $('#nav-top').addClass('border-bottom');
-                    $('#spinner-box').delay(2000).fadeOut(400, function() {
+                    $('#spinner-box').delay(500).fadeOut(400, function() {
                         $('#softwareResults').fadeIn();
                         $('#resultsContainer').mixItUp({
                             animation: {

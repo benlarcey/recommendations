@@ -72,6 +72,9 @@ $('#softwareSubmit').on('click', function() {
     
     if ( ($('input:radio').is(':checked')) && validated === true )  {
         
+        
+    $('#spinner-box').fadeIn(300).show();
+    $('#softwareForm, .form-container, .side-image').fadeOut(100);  
     
     var Airtable = require('airtable');
     var base = new Airtable({ apiKey: 'keyYyZzP8Btod4nXo' }).base('app7aizzZiAt0B0HI');
@@ -197,7 +200,21 @@ $('#softwareSubmit').on('click', function() {
             fetchNextPage();
         }, function done(error) {
             if (error) {
-            console.log(error)};
+            console.log(error)}
+            else {
+                    $('#nav-top').addClass('border-bottom');
+                    $('#spinner-box').delay(2000).fadeOut(400, function() {
+                        $('#softwareResults').fadeIn();
+                        $('#resultsContainer').mixItUp({
+                            animation: {
+                                duration: 780,
+                                effects: 'fade stagger(90ms) translateY(100%)',
+                                easing: 'ease'
+                            }
+                        }); 
+                    });
+            }
+            
         });
         
             $('#selected-business-type').empty().append( verticalSelection );
@@ -211,42 +228,11 @@ $('#softwareSubmit').on('click', function() {
         $('#software-box-helper-radio').addClass('has-danger'),
         $('#software-box-helper-radio').show()
         
-        
         return false;
     }
-    
-
 
     loadSoftware();
-    
-    $('#nav-top').addClass('border-bottom');
-	$('#softwareForm, .form-container, .side-image').fadeOut(100);    
-    
-    $('#spinner-box').delay(100).show().delay(2000).fadeOut(400, function() {
-
-    $('#softwareResults').fadeIn();
-        
-        
-    $('#resultsContainer').mixItUp({
-        
-        
-	animation: {
-		duration: 780,
-		effects: 'fade stagger(90ms) translateY(100%)',
-		easing: 'ease'
-	}
-        
-        
-        
-        
-    }); 
-
-
-    });
-    
-    
     return false;
-    
                         
 });
     

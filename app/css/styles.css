@@ -97,11 +97,11 @@ html {
 }
 
 .intro-img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-60%, -80%);
-
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-60%, -80%);
+    max-width: 100%;
 }
 
 .intro-text {
@@ -656,8 +656,4 @@ input[type=text] {
 
 #resultsContainer .mix{
 	display: none;
-}
-
-.intro-img {
-    max-width: 100%
 }

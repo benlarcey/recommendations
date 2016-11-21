@@ -204,14 +204,17 @@ $('#softwareSubmit').on('click', function() {
             else {
                     $('#nav-top').addClass('border-bottom');
                     $('#spinner-box').delay(500).fadeOut(400, function() {
-                        $('#softwareResults').fadeIn();
-                        $('#resultsContainer').mixItUp({
+                        $('#softwareResults').fadeIn( function (){
+                            $('#resultsContainer').mixItUp({
                             animation: {
                                 duration: 780,
                                 effects: 'fade stagger(90ms) translateY(100%)',
                                 easing: 'ease'
                             }
                         }); 
+                            
+                        });
+                        
                     });
             }
             

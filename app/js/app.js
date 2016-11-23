@@ -53,13 +53,13 @@ var validated = false;
 function validateSelection() {
     if ($.inArray($(this).val(), business_types) === -1) {
         $('#softwareBox').addClass('has-danger'),
-        $('#softwareBoxHelper').show()
+        $('#softwareBoxHelper').fadeIn().css('visibility','visible'),
         validated = false;
         
     }
     else {
         $('#softwareBox').removeClass('has-danger'),
-        $('#softwareBoxHelper').hide(),
+        $('#softwareBoxHelper').css('visibility','hidden'),
         validated = true;    
     }
 }
@@ -70,10 +70,10 @@ $('#softwareSubmit').on('click', function() {
 //	animating = true;
 
     
-    if ( ($('input:radio').is(':checked')) && validated === true )  {
+    if ( ($('input.custom-control-input:radio').is(':checked')) && validated === true )  {
         
         
-    $('#spinner-box').fadeIn(300).show();
+    $('#spinner-box').fadeIn(100).show();
     $('#softwareForm, .form-container, .side-image').fadeOut(100);  
     
     var Airtable = require('airtable');

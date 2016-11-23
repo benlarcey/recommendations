@@ -408,7 +408,7 @@ input[type=text] {
     box-shadow: 0 1px 0 rgba(0,0,0,.05);
     border-radius: 4px;
     -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    transform: translateZ(0);    
     transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
@@ -421,22 +421,20 @@ input[type=text] {
 }
 
 
-
  .softwareBoxContainer {
     border-radius: 0px;
     border: solid 0px #E4EDF5;
     margin-top: 25px;
     transition: box-shadow 0.2s ease-in-out;
-     background-color: #fff;
-}
-
-.softwareBoxContainer {
+    background-color: #fff;
+    -webkit-transform: translate3d(0, 0, 0);
     -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.1);
     -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.1);
     box-shadow: 1px 1px 1px rgba(0,0,0,.1);
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+
 }
 
 .softwareBoxContainer:hover {

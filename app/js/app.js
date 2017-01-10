@@ -35,6 +35,7 @@ var substringMatcher = function(strs) {
 
 };
 
+// Hardcoded business types - change to db
 var business_types = ['Restaurant (Full Service)','Restaurant (Quick Service)','Coffee Shop / Café','Pharmacy','Salon / Barbershop','Convenience Store','Gun Shop','Clothing / Fashion','Grocery / Supermarket','Bar / Nightclub','Pub','Jewelry','Electronics','Repairs','Gym / Health Club','Gift Shop','Pet Store','Alcohol & Wine','Smoking & Vape','Sports & Outdoors','Food Truck','Stadium / Events','Takeaway Restaurant','Other / General Retail','Dry Cleaners / Laundry'];
 
 $('#businessType').typeahead({
@@ -221,38 +222,30 @@ $('#softwareSubmit').on('click', function() {
         });
         
             $('#selected-business-type').empty().append( verticalSelection );
-
-    };
-        
-         }
+    };    
+        }
     
     else {
-        
         $('#software-box-helper-radio').addClass('has-danger'),
         $('#software-box-helper-radio').show()
-        
         return false;
     }
 
     loadSoftware();
-    return false;
-                        
+    return false;               
 });
-    
+
+// Only one checbox allowed at a time.    
 $('input.filter').on('change', function() {
     $('input.filter').not(this).prop('checked', false);  
 });
     
- 
+// Delete results and go back to inital page.
 $('#goBack').on('click', function() {
     $('#softwareResults').fadeOut(),
     $('#softwareForm, .form-container, .side-image').delay(400).fadeIn()
     $('#resultsContainer').mixItUp('destroy');
-    
     return false;
-    
 });
-    
-    
-
+// End on
 });

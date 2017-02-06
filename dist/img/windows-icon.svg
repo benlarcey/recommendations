@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Windows</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Windows" transform="translate(5.000000, 5.000000)">
+            <circle id="Oval" stroke="#7C858A" stroke-width="10" fill="#FFFFFF" cx="251" cy="251" r="251"></circle>
+            <path d="M125.59151,243.133333 L125.5,161.538985 L225.9,147.905502 L225.9,243.133333 L125.59151,243.133333 Z M242.633333,145.47394 L376.466533,126 L376.466533,243.133333 L242.633333,243.133333 L242.633333,145.47394 Z M376.499477,259.866667 L376.466533,377 L242.633333,358.170817 L242.633333,259.866667 L376.499477,259.866667 Z M225.9,356.040454 L125.581575,342.289315 L125.576346,259.866667 L225.9,259.866667 L225.9,356.040454 Z" id="Shape" fill="#98A9B3"></path>
+        </g>
+    </g>
+</svg>
